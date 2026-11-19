@@ -1,0 +1,245 @@
+{
+  "sistema": "TS (Oracle Forms via Java Web Start) - tela SMANUTOS",
+  "versao_mapeamento": "RPA_ISE v7.8 / 18-11-2026",
+  "sintaxe_locator": "role:<papel> and name:<nome exato, sem maiúsc/minúsc> | name:/<regex>/ ; botao_sim_ok/botao_nao são regex do nome do botão dentro da mensagem",
+  "componentes": [
+    {
+      "chave": "janela",
+      "tela": "geral",
+      "locator": "Sonda",
+      "descricao": ""
+    },
+    {
+      "chave": "login_usuario",
+      "tela": "login",
+      "locator": "role:text and name:Usuário:",
+      "descricao": ""
+    },
+    {
+      "chave": "login_senha",
+      "tela": "login",
+      "locator": "role:password text",
+      "descricao": ""
+    },
+    {
+      "chave": "login_entrar",
+      "tela": "login",
+      "locator": "role:push button and name:/Efetua conex|Entrar/",
+      "descricao": ""
+    },
+    {
+      "chave": "atalho",
+      "tela": "menu",
+      "locator": "role:text and name:Sigla da Aplicação",
+      "descricao": "Sigla da aplicação"
+    },
+    {
+      "chave": "atalho_executa",
+      "tela": "menu",
+      "locator": "role:push button and name:Executa",
+      "descricao": "Executa"
+    },
+    {
+      "chave": "os_tipo",
+      "tela": "smanutos_pesquisa",
+      "locator": "role:text and name:Digite o código cpu",
+      "descricao": "Tipo OS"
+    },
+    {
+      "chave": "os_numero",
+      "tela": "smanutos_pesquisa",
+      "locator": "role:text and name:Digite o número operacional",
+      "descricao": "Número da OS"
+    },
+    {
+      "chave": "os_seq",
+      "tela": "smanutos_pesquisa",
+      "locator": "role:text and name:Digite o número de sequencia",
+      "descricao": "Sequência"
+    },
+    {
+      "chave": "num_os",
+      "tela": "smanutos_pesquisa",
+      "locator": "role:text and name:Digite o número operacional",
+      "descricao": "Número da OS"
+    },
+    {
+      "chave": "botao_pesquisa_os",
+      "tela": "smanutos_pesquisa",
+      "locator": "role:push button and name:Pesquisa por numero operacional",
+      "descricao": "Pesquisar"
+    },
+    {
+      "chave": "nova_pesquisa",
+      "tela": "smanutos_pesquisa",
+      "locator": "role:push button and name:Nova Pesquisa",
+      "descricao": "Nova Pesquisa"
+    },
+    {
+      "chave": "data_origem",
+      "tela": "smanutos_cabecalho",
+      "locator": "role:text and name:Data origem",
+      "descricao": "Data origem"
+    },
+    {
+      "chave": "competencia_os",
+      "tela": "smanutos_cabecalho",
+      "locator": "role:text and name:Competência",
+      "descricao": "Competência"
+    },
+    {
+      "chave": "alterar_dados",
+      "tela": "smanutos_cabecalho",
+      "locator": "role:push button and name:Alterar Dados da OS",
+      "descricao": "Alterar Dados da OS"
+    },
+    {
+      "chave": "aba_intervencao",
+      "tela": "aba_intervencao",
+      "locator": "role:page tab and name:Intervenção",
+      "descricao": "aba Intervenção"
+    },
+    {
+      "chave": "data_inicio",
+      "tela": "aba_intervencao",
+      "locator": "role:text and name:Data início",
+      "descricao": "Data início"
+    },
+    {
+      "chave": "aba_recl_ind",
+      "tela": "aba_recl_individual",
+      "locator": "role:page tab and name:Recl. Individual",
+      "descricao": "aba Recl. Individual"
+    },
+    {
+      "chave": "data_reclamacao",
+      "tela": "aba_recl_individual",
+      "locator": "role:text and name:/^Data (de )?reclama/",
+      "descricao": "Data reclamação"
+    },
+    {
+      "chave": "aba_info",
+      "tela": "aba_info_genericas",
+      "locator": "role:page tab and name:Info. Genéricas",
+      "descricao": "aba Info. Genéricas"
+    },
+    {
+      "chave": "expurgo_ise",
+      "tela": "aba_info_genericas",
+      "locator": "role:check box and name:/expurgo de Indicadores/",
+      "descricao": "Expurgo ISE"
+    },
+    {
+      "chave": "decreto_campo",
+      "tela": "aba_info_genericas",
+      "locator": "role:text and name:/Codigo Único do Evento/",
+      "descricao": "Decreto/ISE"
+    },
+    {
+      "chave": "decreto_lov",
+      "tela": "aba_info_genericas",
+      "locator": "role:push button and name:Escolha o Decreto",
+      "descricao": "lista de relatórios"
+    },
+    {
+      "chave": "lov_lista",
+      "tela": "lista_decretos",
+      "locator": "role:list",
+      "descricao": ""
+    },
+    {
+      "chave": "lov_ok",
+      "tela": "lista_decretos",
+      "locator": "role:push button and name:OK",
+      "descricao": "OK da lista"
+    },
+    {
+      "chave": "lov_cancel",
+      "tela": "lista_decretos",
+      "locator": "role:push button and name:/^(Cancel|Cancelar)$/",
+      "descricao": "Cancelar da lista"
+    },
+    {
+      "chave": "justificativa",
+      "tela": "aba_info_genericas",
+      "locator": "role:text and name:Digite o motivo da ação",
+      "descricao": "Justificativa"
+    },
+    {
+      "chave": "data_conclusao_info",
+      "tela": "aba_info_genericas",
+      "locator": "role:text and name:/^Digite a data de conclus/",
+      "descricao": "Data conclusão"
+    },
+    {
+      "chave": "salvar",
+      "tela": "smanutos_cabecalho",
+      "locator": "role:push button and name:Salvar",
+      "descricao": "Salvar"
+    },
+    {
+      "chave": "botao_sim_ok",
+      "tela": "mensagens",
+      "locator": "^(OK|Sim|Yes|Confirma)$",
+      "descricao": ""
+    },
+    {
+      "chave": "botao_nao",
+      "tela": "mensagens",
+      "locator": "^(Não|Nao|No|Cancelar|Cancel)$",
+      "descricao": ""
+    }
+  ],
+  "mensagens": [
+    {
+      "trecho_minusculo": "deseja salvar as altera",
+      "status": null,
+      "acao": "confirmar"
+    },
+    {
+      "trecho_minusculo": "conforme a rela",
+      "status": null,
+      "acao": "confirmar"
+    },
+    {
+      "trecho_minusculo": "deseja continuar",
+      "status": null,
+      "acao": "confirmar"
+    },
+    {
+      "trecho_minusculo": "dados alterados com sucesso",
+      "status": "ok",
+      "acao": "sucesso"
+    },
+    {
+      "trecho_minusculo": "transação completa",
+      "status": "ok",
+      "acao": "sucesso"
+    },
+    {
+      "trecho_minusculo": "data de conclusão da o.s. não pode ser",
+      "status": "erro-data-conclusao",
+      "acao": "erro"
+    },
+    {
+      "trecho_minusculo": "sendo tratada",
+      "status": "erro-os-em-tratamento",
+      "acao": "erro"
+    },
+    {
+      "trecho_minusculo": "tratada por outro usu",
+      "status": "erro-os-em-uso-outro-usuario",
+      "acao": "erro"
+    },
+    {
+      "trecho_minusculo": "subcausa não encontrada",
+      "status": "erro-subcausa-nao-encontrada",
+      "acao": "erro"
+    },
+    {
+      "trecho_minusculo": "frm-",
+      "status": "erro-oracle-forms",
+      "acao": "erro"
+    }
+  ]
+}

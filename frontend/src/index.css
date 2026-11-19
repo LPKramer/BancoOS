@@ -1,0 +1,115 @@
+@import "tailwindcss";
+@import "@fontsource/fira-sans/400.css";
+@import "@fontsource/fira-sans/500.css";
+@import "@fontsource/fira-sans/600.css";
+@import "@fontsource/fira-code/400.css";
+@import "@fontsource/fira-code/500.css";
+
+/* Tokens de design-system/analise-os/MASTER.md */
+@theme {
+  --color-fundo: #020617;
+  --color-cartao: #0e1223;
+  --color-suave: #1a1e2f;
+  --color-secundaria: #1e293b;
+  --color-borda: #334155;
+  --color-texto: #f8fafc;
+  --color-texto-suave: #94a3b8;
+  --color-acao: #16a34a;
+  --color-acao-forte: #15803d;
+  --color-erro: #dc2626;
+  --color-erro-texto: #fca5a5;
+  --color-pendente: #d97706;
+  --color-pendente-texto: #fcd34d;
+  --color-ok-texto: #86efac;
+  --color-info-texto: #93c5fd;
+  --color-anel: #ffffff;
+
+  --font-sans: "Fira Sans", system-ui, sans-serif;
+  --font-mono: "Fira Code", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    font-size: 14px;
+  }
+  body {
+    @apply bg-fundo text-texto font-sans antialiased;
+    line-height: 1.45;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-anel);
+    outline-offset: 2px;
+  }
+  button,
+  a,
+  select,
+  summary,
+  [role="button"] {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+  }
+  table {
+    border-collapse: collapse;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0ms !important;
+    animation-duration: 0ms !important;
+  }
+}
+
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Mapa (Leaflet) no tema escuro */
+.leaflet-container {
+  background: #0b1020 !important;
+  font-family: var(--font-sans) !important;
+}
+.leaflet-bar {
+  border: 1px solid var(--color-borda) !important;
+  box-shadow: none !important;
+}
+.leaflet-bar a,
+.leaflet-bar a:hover {
+  background: var(--color-secundaria) !important;
+  color: var(--color-texto) !important;
+  border-bottom-color: var(--color-borda) !important;
+}
+.leaflet-bar a:hover {
+  background: var(--color-borda) !important;
+}
+.leaflet-tooltip {
+  background: var(--color-cartao) !important;
+  color: var(--color-texto) !important;
+  border: 1px solid var(--color-borda) !important;
+  box-shadow: none !important;
+  font-size: 12px !important;
+}
+.leaflet-tooltip-top::before {
+  border-top-color: var(--color-borda) !important;
+}
+.leaflet-tooltip-bottom::before {
+  border-bottom-color: var(--color-borda) !important;
+}
+.leaflet-tooltip-left::before {
+  border-left-color: var(--color-borda) !important;
+}
+.leaflet-tooltip-right::before {
+  border-right-color: var(--color-borda) !important;
+}
+.leaflet-control-attribution {
+  background: rgba(2, 6, 23, 0.75) !important;
+  color: var(--color-texto-suave) !important;
+}
+.leaflet-control-attribution a {
+  color: var(--color-texto-suave) !important;
+}

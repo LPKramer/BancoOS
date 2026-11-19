@@ -1,0 +1,39 @@
+# Ambiente e build
+backend/.venv/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+frontend/node_modules/
+frontend/dist/
+.env
+backend/.env
+
+# Dados do app: banco SQLite com OS reais, uploads e relatórios do piloto do LLM
+dados_app/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+
+# Bases e arquivos da empresa (dados de clientes, rede e acesso ao TS): ficam só no PC
+*.accdb
+*.mdb
+*.laccdb
+*.xlsx
+*.xlsm
+*.xls
+*.csv
+!backend/osanalise/recursos/*.csv
+*.jnlp
+Visualizador OS aberta/
+KB_TS/
+# gerados pelo schema_dump com amostras de valores reais (clientes, analistas)
+docs/access/colunas.md
+docs/access/dominios.md
+
+# Ferramentas locais do editor/assistente
+.claude/
+
+# Cache de build do TypeScript
+*.tsbuildinfo
