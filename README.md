@@ -6,21 +6,28 @@ para o robô do TS (fase 2).
 
 ## Rodar
 
-Primeira vez (no PC que será o servidor):
+O servidor só precisa do **Python 3.11 ou mais novo**. A interface já vem compilada em `frontend/dist`,
+então o PC da rede corporativa não precisa de Node.
+
+Primeira vez (no PC que será o servidor), na pasta do projeto: `instalar.bat`, ou à mão:
 
 ```powershell
 python -m venv backend\.venv
 backend\.venv\Scripts\python.exe -m pip install -e "backend[dev]"
-cd frontend; npm install; npm run build; cd ..
 ```
 
-Subir o servidor:
+Subir o servidor: `iniciar.bat` (ou `.\iniciar.ps1`). Abrir `http://localhost:8780` (nos outros PCs da
+rede: `http://<nome-ou-ip-do-servidor>:8780`).
+
+## Mudar a interface
+
+Só quem altera `frontend/src` precisa de Node, num PC fora da rede corporativa. Depois de alterar,
+compile e mande o `frontend/dist` junto no commit (o teste `test_interface_compilada` confere que ele
+está completo):
 
 ```powershell
-.\iniciar.ps1
+cd frontend; npm install; npm run build; cd ..
 ```
-
-Abrir `http://localhost:8780` (nos outros PCs da rede: `http://<nome-ou-ip-do-servidor>:8780`).
 
 ## Configuração
 

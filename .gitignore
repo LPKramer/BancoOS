@@ -5,7 +5,7 @@ backend/.venv/
 *.egg-info/
 .pytest_cache/
 frontend/node_modules/
-frontend/dist/
+# frontend/dist vai no repositório: o PC da rede corporativa roda o app sem Node
 .env
 backend/.env
 

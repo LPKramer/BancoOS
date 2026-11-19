@@ -1,0 +1,3 @@
+# Interface já compilada: vai como está, sem conversão de fim de linha nem diff
+frontend/dist/** binary
+*.bat text eol=crlf
